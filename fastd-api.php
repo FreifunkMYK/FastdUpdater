@@ -27,6 +27,9 @@ foreach($data as $router) {
 	}
 }
 
+//Check if we fscked up
+if(count($active) < 10) die('Less than 10 nodes? Database broken?');
+
 //Remove orphan nodes
 $dh = opendir($out);
 while(($file = readdir($dh)) !== false) {
