@@ -12,6 +12,7 @@ if(!is_writable($out)) die('Output dir not writable');
 $data = file_get_contents($url);
 $data = unserialize($data);
  
+$active=array();
 foreach($data as $router) {
 	if(!preg_match('/^[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}$/', $router['MAC'])) {
 		trigger_error('Router mit falscher MAC?!', E_USER_WARNING);
