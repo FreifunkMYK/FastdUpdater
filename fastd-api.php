@@ -1,6 +1,6 @@
 #!/usr/bin/php -f
 <?php
-$url = 'http://register.freifunk-myk.de/srvapi.php';
+$url = 'https://www.freifunk-myk.de/node/keys';
 $out = '/etc/fastd/vpn/peers/';
 
 
