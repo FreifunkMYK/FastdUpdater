@@ -14,6 +14,8 @@ $data = unserialize($data);
  
 $active=array();
 foreach($data as $router) {
+	$router['MAC'] = trim($router['MAC']);
+	$router['PublicKey'] = trim($router['PublicKey']);
 	if(!preg_match('/^[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}$/', $router['MAC'])) {
 		trigger_error('Router mit falscher MAC?!', E_USER_WARNING);
 	}elseif(!preg_match('/^[A-F0-9]{64}$/', $router['PublicKey'])) {
