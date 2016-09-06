@@ -1,5 +1,6 @@
 #!/usr/bin/php -f
 <?php
+// add include "/etc/dhcpd.hosts.conf"; to your dhcp config
 $url = 'https://www.ffmyk.de/services/ips';
 $out = '/etc/dhcpd.hosts.conf';
  
